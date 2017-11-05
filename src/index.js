@@ -1,5 +1,8 @@
 import React,  { Component } from 'react';    //React knows how to render the components/elemts, i.e. manage components
 import ReactDOM from 'react-dom';// Render's react component to DOM, Basically used to render DOM
+import YTSearch from 'youtube-api-search';
+
+const API_KEY = 'AIzaSyDuFtZHAHs9frZTimVBFoP4Pti6ZkKSE7I';
 
 // Create a component which produces some html
 const App = () => {  //const App = function(){
