@@ -5,7 +5,7 @@ class SearchBar extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { term: 'Praveen' };  // Only Class-Based Components have state
+        this.state = { term: '' };  // Only Class-Based Components have state
     }
 
     render() {   // Every Class based Components should have a render method.

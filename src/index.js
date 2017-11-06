@@ -2,6 +2,7 @@ import React, { Component } from 'react';    //React knows how to render the com
 import ReactDOM from 'react-dom';// Render's react component to DOM, Basically used to render DOM
 import SearchBar from './components/search_bar';
 import YTSearch from 'youtube-api-search';
+import VideoList from './components/Video_list';
 
 const API_KEY = 'AIzaSyDuFtZHAHs9frZTimVBFoP4Pti6ZkKSE7I';
 
@@ -26,6 +27,7 @@ class App extends Component {  //const App = function(){  // App is constant bec
         return (
             <div>
                 <SearchBar />
+                <VideoList videos={this.state.videos}/>
             </div>
         )
     }
