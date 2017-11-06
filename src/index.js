@@ -16,7 +16,7 @@ class App extends Component {  //const App = function(){  // App is constant bec
 
         YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
             this.setState({ videos });    // this.setState({ videos : videos }); // When kEy and Value are same we can just use one name
-         });
+        });
 
         // YTSearch({ key: API_KEY, term: 'surfboards' }, (data) => {
         //    this.setState({videos : data});
@@ -27,7 +27,7 @@ class App extends Component {  //const App = function(){  // App is constant bec
         return (
             <div>
                 <SearchBar />
-                <VideoList videos={this.state.videos}/>
+                <VideoList videos={this.state.videos} />
             </div>
         )
     }
