@@ -5,20 +5,30 @@ import YTSearch from 'youtube-api-search';
 
 const API_KEY = 'AIzaSyDuFtZHAHs9frZTimVBFoP4Pti6ZkKSE7I';
 
-
-YTSearch({key: API_KEY, term: 'surfboards'}, function(data) {
-    console.log(data);
-    });  
-
-
 // Create a component which produces some html
-const App = () => {  //const App = function(){
-    // App is constant because we dont want this variable to change again in future.
-    return (
-        <div>
-            <SearchBar />
-        </div>
-    )
+class App extends Component {  //const App = function(){  // App is constant because we dont want this variable to change again in future.
+
+
+    constructor(props) {
+        super(props);
+        this.state = { videos: [] };
+
+        YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
+            this.setState({ videos });    // this.setState({ videos : videos }); // When kEy and Value are same we can just use one name
+         });
+
+        // YTSearch({ key: API_KEY, term: 'surfboards' }, (data) => {
+        //    this.setState({videos : data});
+        // });
+    }
+
+    render() {
+        return (
+            <div>
+                <SearchBar />
+            </div>
+        )
+    }
 }
 
 // Take this component's generated html and put it on page (DOM)
