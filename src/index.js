@@ -5,6 +5,12 @@ import YTSearch from 'youtube-api-search';
 
 const API_KEY = 'AIzaSyDuFtZHAHs9frZTimVBFoP4Pti6ZkKSE7I';
 
+
+YTSearch({key: API_KEY, term: 'surfboards'}, function(data) {
+    console.log(data);
+    });  
+
+
 // Create a component which produces some html
 const App = () => {  //const App = function(){
     // App is constant because we dont want this variable to change again in future.
