@@ -14,9 +14,14 @@ class SearchBar extends Component {
                 <input
                     // Controlled Form Element means the input value is set by the state. So Value changes only when the state changes.
                     value={this.state.term}
-                    onChange={(event) => this.setState({ term: event.target.value })} />
+                    onChange={event => this.onInputChange(event.target.value)} />
             </div>
         );
+    }
+
+    onInputChange(term){
+        this.setState({term});
+        this.props.onSearchTermChange(term);
     }
 }
 
