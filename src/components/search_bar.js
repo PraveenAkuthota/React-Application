@@ -10,7 +10,7 @@ class SearchBar extends Component {
 
     render() {   // Every Class based Components should have a render method.
         return (
-            <div>
+            <div className="search-bar">
                 <input
                     // Controlled Form Element means the input value is set by the state. So Value changes only when the state changes.
                     value={this.state.term}
