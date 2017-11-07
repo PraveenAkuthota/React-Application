@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';// Render's react component to DOM, Basically u
 import SearchBar from './components/search_bar';
 import YTSearch from 'youtube-api-search';
 import VideoList from './components/Video_list';
+import VideoDetail from './components/video_detail';
+
 
 const API_KEY = 'AIzaSyDuFtZHAHs9frZTimVBFoP4Pti6ZkKSE7I';
 
@@ -27,6 +29,7 @@ class App extends Component {  //const App = function(){  // App is constant bec
         return (
             <div>
                 <SearchBar />
+                <VideoDetail video={this.state.videos[0]} />
                 <VideoList videos={this.state.videos} />
             </div>
         )
